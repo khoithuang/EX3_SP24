@@ -1,3 +1,4 @@
+# I got help from ChatGPT
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtGui import QPainterPath
 from PyQt5.QtWidgets import QApplication, QGraphicsScene, QGraphicsView, QGraphicsItem
