@@ -11,7 +11,7 @@ class ottoCycleModel():
         """
         Constructor for an air standard otto cycle.  The Otto has 4 primary states and consists of four thermodynamic
         processes:
-        1. Isentropic compression from: v1, T1, P1 to v2, T2, P2 (Note v2=v1/C.R.)
+        1. Isentropic compression from: v1, T1, P1 to v2, T2, P2_txt (Note v2=v1/C.R.)
         2. Constant volume heat addition:  v3=v2
         3. Isentropic expansion (power stroke): v3=v1
         4. Constant volume heat rejection.

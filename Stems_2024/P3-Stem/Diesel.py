@@ -11,8 +11,8 @@ class dieselCycleModel():
         """
         Constructor for an air standard diesel cycle.  The Diesel has 4 primary states and consists of four thermodynamic
         processes:
-        1. Isentropic compression from: v1, T1, P1 to v2, T2, P2 (Note v2=v1/C.R.)
-        2. Constant pressure heat addition (power stroke part 1):  P3-Stem=P2 with specified cutoff ratio of rc=v3/v2
+        1. Isentropic compression from: v1, T1, P1 to v2, T2, P2_txt (Note v2=v1/C.R.)
+        2. Constant pressure heat addition (power stroke part 1):  P3-Stem=P2_txt with specified cutoff ratio of rc=v3/v2
         3. Isentropic expansion (power stroke part 2): v3=v1
         4. Constant volume heat rejection.
         Compression stroke work = (u2-u1)

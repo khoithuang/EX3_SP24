@@ -399,7 +399,7 @@ class air():
     def deltas_tp(self, T1=None, T2=None, P1=None, P2=None):
         """
         For calculating changes in molar entropy for air as an ideal gas s=s(T,V)
-        Tds=dh-vdP -> delta s = int(cp/T*dT, T1, T2)-R ln(P2/P1)
+        Tds=dh-vdP -> delta s = int(cp/T*dT, T1, T2)-R ln(P2_txt/P1)
         :param T1: Temperature 1 in K
         :type T1: float
         :param T2:  Temperature 2 in K
