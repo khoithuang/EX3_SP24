@@ -38,8 +38,8 @@ class MainWindow(qtw.QWidget, Ui_Form):
         # End main ui code
 
         #create otto and diesel controller objects to work with later
-        self.otto = #$JES MISSING CODE  # instantiate an ottoCycleController object
-        self.diesel = #$JES MISSING CODE # instantiate a dieselCycleController object
+        self.otto = ottoCycleController() #$JES MISSING CODE  # instantiate an ottoCycleController object
+        self.diesel = dieselCycleController()#$JES MISSING CODE # instantiate a dieselCycleController object
         self.controller=self.otto
         self.someWidgets=[]
 
@@ -84,9 +84,9 @@ class MainWindow(qtw.QWidget, Ui_Form):
         self.controller.updateView()
 
     def selectCycle(self):
-        otto = #$JES MISSING CODE # determine if otto cycle is chosen (true) or not (false -> diesel cycle)
+        otto = self.cmb_OttoDiesel.currentIndex() == 0  # Assuming Otto is at index 0 #$JES MISSING CODE # determine if otto cycle is chosen (true) or not (false -> diesel cycle)
         self.gb_Input.setTitle('Input for Air Standard {} Cycle:'.format('Otto' if otto else 'Diesel'))
-        self.controller= #$JES MISSING CODE  # set self.controller to self.otto or self.diesel
+        self.controller= self.otto if otto else self.diesel#$JES MISSING CODE  # set self.controller to self.otto or self.diesel
         self.controller.updateView()
 
     def setUnits(self):
@@ -97,9 +97,11 @@ class MainWindow(qtw.QWidget, Ui_Form):
         This is called when the calculate button is clicked
         :return: nothing
         '''
+        self.controller.calc()  # Call the calculate method of the currently active controller
+        self.controller.updateView()  # Update the GUI to reflect the new calculation results
         #calculate the cycle efficiency (and states 1,2,3,4)
         #$JES MISSING CODE call the calc function of the controller
-        pass
+
 
 #if this module is being imported, this won't run. If it is the main module, it will run.
 if __name__== '__main__':

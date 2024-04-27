@@ -607,6 +607,22 @@ class circuitController():
                 #endregion
             elif l.find('<resistor')>=0:
                 #region reading a resistor
+                # Reading a resistor
+                i += 1
+                l = data[i]
+                R = resistor()
+                while '/resistor' not in l.lower():
+                    if 'name' in l.lower():
+                        R.name = l.split(':')[1].strip()
+                    elif 'node1' in l.lower():
+                        R.node1Name = l.split(':')[1].strip()
+                    elif 'node2' in l.lower():
+                        R.node2Name = l.split(':')[1].strip()
+                    elif 'resistance' in l.lower():
+                        R.R = float(l.split(':')[1].strip())
+                    i += 1
+                    l = data[i]
+                self.Model.resistors.append(dc(R))
                 #$JES MISSING CODE
                 #endregion
             elif l.find('<inductor') >= 0:
