@@ -1,0 +1,58 @@
+<circuit>
+    <node>
+    name: Node1
+    position: 0, 50
+    draw: true
+    </node>
+
+    <node>
+    name: Node2
+    position: 50, 50
+    draw: true
+    </node>
+
+    <node>
+    name: Node3
+    position: 50, 0
+    draw: true
+    </node>
+
+    <resistor>
+    name: R1
+    node1Name: Node1
+    node2Name: Node2
+    resistance: 100
+    </resistor>
+
+    <capacitor>
+    name: C1
+    node1Name: Node2
+    node2Name: Node3
+    capacitance: 0.01
+    </capacitor>
+
+    <inductor>
+    name: L1
+    node1Name: Node3
+    node2Name: Node1
+    inductance: 1
+    </inductor>
+
+    <wire>
+    name: Wire1
+    node1Name: Node1
+    node2Name: Node2
+    </wire>
+
+    <wire>
+    name: Wire2
+    node1Name: Node2
+    node2Name: Node3
+    </wire>
+
+    <wire>
+    name: Wire3
+    node1Name: Node3
+    node2Name: Node1
+    </wire>
+</circuit>
