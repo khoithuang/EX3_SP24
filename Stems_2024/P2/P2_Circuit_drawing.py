@@ -1,8 +1,8 @@
 # I got help from ChatGPT
 from PyQt5 import QtWidgets, QtGui, QtCore
-from PyQt5.QtGui import QPainterPath
-from PyQt5.QtWidgets import QApplication, QGraphicsScene, QGraphicsView, QGraphicsItem
-from PyQt5.QtCore import QPointF, QRectF
+from PyQt5.QtGui import QPainterPath, QPen
+from PyQt5.QtWidgets import QApplication, QGraphicsScene, QGraphicsView, QGraphicsItem, QGraphicsPathItem
+from PyQt5.QtCore import QPointF, QRectF, Qt, QSizeF
 import sys
 import xml.etree.ElementTree as ET
 
